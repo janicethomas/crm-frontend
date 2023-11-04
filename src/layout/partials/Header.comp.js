@@ -12,6 +12,7 @@ export const Header = () => {
                 <Nav className="ms-auto">
                     <Nav.Link>Dashboard</Nav.Link>
                     <Nav.Link>Tickets</Nav.Link>
+                    <Nav.Link>Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
