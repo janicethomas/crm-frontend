@@ -1,6 +1,6 @@
-import React from 'react';
-import './Homepage.css';
-import {Link} from 'react-router-dom';
+import React from "react";
+import "./Homepage.css";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -8,21 +8,37 @@ const Homepage = () => {
       <h1>Welcome to CRM</h1>
       <div className="button-container">
         <button className="client-button">
-          <img src="client_image_url" alt="Client" />
-          <Link to={"/client-login/"}>
-                    Client Login
-                    </Link>
-          
+          <Link to={"/client-login/"} className="link">
+            <img
+              src="https://o.remove.bg/downloads/efc9565c-0fb4-482d-851e-61d3c7b5724c/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer-removebg-preview.png"
+              alt="Client"
+              width="190px"
+              height="200px"
+            />
+            <br></br> Client Login
+          </Link>
         </button>
         <button className="manager-button">
-          <img src="manager_image_url" alt="Manager" />
-          <Link to={"/client-login/"}>
-                    Client Login
-                    </Link>
+          <Link to={"/agent-login/"} className="link">
+            <img
+              src="https://o.remove.bg/downloads/c93901f4-5f56-4ab9-a205-83c389ddac08/images-removebg-preview.png"
+              alt="Agent"
+              width="190px"
+              height="200px"
+            />
+            <br></br> Agent Login
+          </Link>
         </button>
         <button className="admin-button">
-          <img src="admin_image_url" alt="Admin" />
-          Admin Login
+          <Link to={"/admin-login/"} className="link">
+            <img
+              src="https://o.remove.bg/downloads/8cdeda1a-d336-45fb-99d2-a6b47f78cb48/61f75ea9a680def2ed1c6929fe75aeee-removebg-preview.png"
+              alt="Admin"
+              width="190px"
+              height="200px"
+            />
+            <br></br>Admin Login
+          </Link>
         </button>
       </div>
     </div>
