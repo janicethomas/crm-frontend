@@ -41,7 +41,9 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
             </Row>
             <Row>
                 <Col>
-                    <a href='#!' onClick={() => formSwitcher('reset')}>Forget Password</a>
+                <Link to={"/forget-password/"}>
+                Forgot Password
+                </Link>
                 </Col>
             </Row>
         </Container>
