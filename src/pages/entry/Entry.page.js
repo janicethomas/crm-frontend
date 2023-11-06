@@ -48,7 +48,7 @@ export const Entry = () => {
     };
 
     return (
-        <div className='entry-page bg-info'>
+        <div className='entry-page'>
             <div className='jumbotron'>
                 {frmLoad === 'login' && <LoginForm
                     handleOnChange={handleOnChange}

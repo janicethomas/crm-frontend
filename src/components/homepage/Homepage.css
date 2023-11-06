@@ -1,14 +1,24 @@
-.App {
-    text-align: center;
-    background-image: url("https://img.freepik.com/free-vector/flat-design-travel-background_23-2149193475.jpg");
+.main {
+    background-image: url("https://img.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61769.jpg");
     background-repeat: no-repeat;
     min-width: 100%;
     min-height: 100%;
     background-size: cover;
 }
 
+.container-fluid {
+    min-height: 100vh;
+    padding: 0px;
+}
 
+.title {
+    color: var(--violet-dark);
+    margin-bottom: 2rem;
+}
 
+.subtitle {
+    color: var(--green)
+}
 
 .link {
     color: rgb(0, 0, 0);
@@ -22,21 +32,13 @@
     margin-top: 20px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
 .button-container {
     border: 2px solid rgb(172, 172, 172);
-    border-radius: 20px;
+    border-radius: 20%;
     background-color: rgb(255, 189, 189);
     backdrop-filter: calc(0.5);
     margin-left: 65%;
     margin-right: 2%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 
@@ -46,21 +48,20 @@ h1 {
     margin: 1rem;
     padding: 0.5rem 4rem;
     border: none;
-    border-radius: 70px;
-    background-color: #4CAF50;
+    border-radius: 4rem;
     color: white;
     font-size: 1.2rem;
     align-items: center;
     cursor: pointer;
 }
 
-.button-image {
+/* .button-image {
     width: 50px;
     height: 50px;
     margin-right: 0.5rem;
-}
+} */
 
-button:hover {
+/* button:hover {
     transition: all 0.4s ease;
     background-color: #169c1b;
-}
+} */

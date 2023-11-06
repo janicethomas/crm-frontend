@@ -1,4 +1,4 @@
-.default-layout {
+/* .default-layout {
     display: gird;
     grid-template-rows: 80px auto 3rem;
     grid-template-areas:
@@ -21,4 +21,38 @@ footer {
     background: black;
     padding: 1rem;
     color: white;
+} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --violet-dark: rgb(55, 66, 89);
+    --violet-light: rgb(84, 91, 119);
+    --green: rgb(92, 137, 132);
+    --green-shadow: rgb(67, 99, 95);
+}
+
+button {
+    margin: 1rem;
+    padding: 0.5rem 4rem;
+    border: none;
+    background-color: var(--green);
+    border-radius: 70%;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--green-shadow);
+    transition: all 0.4s ease;
+}
+
+Link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }

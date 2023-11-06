@@ -8,7 +8,7 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-info text-center'>Client Login</h1>
+                    <h1 className='text-center'>Client Login</h1>
                     <hr />
                     <Form autoComplete='off' onSubmit={handleOnSubmit}>
                         <Form.Group>
@@ -34,7 +34,7 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
                                 required
                             />
                         </Form.Group>
-
+                            <br></br>
                         <Button type='Submit'>Login</Button>
                     </Form>
                     <hr />
