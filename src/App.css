@@ -38,6 +38,12 @@ footer {
     --Green: rgb(255, 106, 104);
     --peach: rgb(208, 55, 0);
     --peach-shadow: rgb(196, 12, 2);
+    --peach-shadow1: rgb(103, 5, 0);
+    --yellow-light: hsl(44, 95%, 83%);
+    --green-light: hsl(158, 68%, 75%);
+    --red-light: hsl(0, 84%, 80%);
+    --orange-light: hsl(22, 85%, 80%);
+    --backdrop-filter-blur: blur(5px);
 }
 
 button {
