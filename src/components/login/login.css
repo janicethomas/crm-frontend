@@ -1,0 +1,51 @@
+.ltitle{
+    font-size: 45px;
+    color: var(--Green) !important;
+}
+
+.forgot{
+    font-size: 18px;
+    color: var(--peach-shadow);
+}
+
+.forgot:hover{
+    color: var(--peach-shadow1);
+}
+
+.password{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.btn{
+    background-color: var(--peach) !important;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: var(--peach);
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--peach-shadow) !important;
+}
+
+.form-control{
+    background-color: rgba(255,255,255,0.44) !important;
+    box-shadow: 0px 0px 15px -5px black;
+}
+
+.form-control:hover{
+    background-color: rgba(255,255,255,0.564) !important;
+}
+
+.m-0{
+    font-size: 18px !important;
+    color: var(--peach-shadow1) !important;
+    padding: 7px;
+}
