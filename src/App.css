@@ -34,13 +34,17 @@ footer {
     --violet-light: rgb(84, 91, 119);
     --green: rgb(92, 137, 132);
     --green-shadow: rgb(67, 99, 95);
+    --White90: rgb(255, 212, 227);
+    --Green: rgb(255, 106, 104);
+    --peach: rgb(208, 55, 0);
+    --peach-shadow: rgb(196, 12, 2);
 }
 
 button {
     margin: 1rem;
     padding: 0.5rem 4rem;
     border: none;
-    background-color: var(--green);
+    background-color: var(--peach);
     border-radius: 70%;
     color: white;
     align-items: center;
@@ -48,9 +52,11 @@ button {
 }
 
 button:hover {
-    background-color: var(--green-shadow);
+    background-color: var(--peach-shadow);
     transition: all 0.4s ease;
+    transform: scale(1.05);
 }
+
 
 Link {
     color: rgb(0, 0, 0);
