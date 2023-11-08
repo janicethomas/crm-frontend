@@ -1,4 +1,5 @@
 import React from 'react';
+import "./login.css";
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
@@ -8,11 +9,11 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-center'>Client Login</h1>
+                    <h1 className='text-center ltitle'>Client Login</h1>
                     <hr />
                     <Form autoComplete='off' onSubmit={handleOnSubmit}>
                         <Form.Group>
-                            <Form.Label>Email Address</Form.Label>
+                            <Form.Label class="password">Email Address</Form.Label>
                             <Form.Control
                                 type="email"
                                 name="email"
@@ -24,7 +25,7 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label class="password">Password</Form.Label>
                             <Form.Control
                                 type="Password"
                                 name="Password"
@@ -35,19 +36,20 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
                             />
                         </Form.Group>
                             <br></br>
-                        <Button type='Submit'>Login</Button>
+                        <Button type='Submit' class="buttons">Login</Button>
                     </Form>
                     <hr />
                 </Col>
             </Row>
-            <Row>
+            <Row >
                 <Col>
-                <Link to={"/forget-password/"}>
+                <Link to={"/forget-password/"} class='forgot'>
                 Forgot Password
                 </Link>
                 </Col>
             </Row>
         </Container>
+        
     )
 }
 
