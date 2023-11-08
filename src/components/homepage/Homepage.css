@@ -93,3 +93,102 @@
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 30px rgba(0,7,16,0.6);
 }
+
+@keyframes bubble{
+    0%{
+        transform: translateY(0vh);
+        opacity: 0;
+    }
+    5%, 95%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.bubble-animation-item{
+    position: absolute !important;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 50% !important;
+    border: 2px solid transparent !important;
+    z-index: 10 !important;
+    -webkit-backdrop-filter: var(--backdrop-filter-blur) !important;
+    backdrop-filter: var(--backdrop-filter-blur) !important;
+}
+.bubble-animation-item:nth-child(1){
+    border-color: var(--yellow-light) !important;
+    top: 93% !important;
+    left: 10% !important;
+    animation: bubble 30s linear infinite !important;
+}
+.bubble-animation-item:nth-child(2){
+    border-color: var(--green-light) !important;
+    top: 68% !important;
+    left: 50% !important;
+    animation: bubble 40s linear infinite !important;
+}
+.bubble-animation-item:nth-child(3){
+    border-color: var(--red-light) !important;
+    top: 78% !important;
+    left: 90% !important;
+    animation: bubble 50s linear infinite !important;
+}
+.bubble-animation-item:nth-child(4){
+    border-color: var(--yellow-light) !important;
+    top: 92% !important;
+    left: 60% !important;
+    animation: bubble 60s linear infinite !important;
+}
+.bubble-animation-item:nth-child(5){
+    border-color: var(--green-light) !important;
+    top: 80% !important;
+    left: 34% !important;
+    animation: bubble 70s linear infinite !important;
+}
+.bubble-animation-item:nth-child(6){
+    border-color: var(--red-light) !important;
+    top: 57% !important;
+    left: 28% !important;
+    animation: bubble 80s linear infinite !important;
+}
+.bubble-animation-item:nth-child(7){
+    border-color: var(--yellow-light) !important;
+    top: 89% !important;
+    left: 5% !important;
+    animation: bubble 60s linear infinite !important;
+}
+.bubble-animation-item:nth-child(8){
+    border-color: var(--green-light) !important;
+    top: 56% !important;
+    left: 77% !important;
+    animation: bubble 70s linear infinite !important;
+}
+.bubble-animation-item:nth-child(9){
+    border-color: var(--red-light) !important;
+    top: 75% !important;
+    left: 65% !important;
+    animation: bubble 80s linear infinite !important;
+}
+.bubble-animation-item:nth-child(10){
+    border-color: var(--orange-light) !important;
+    top: 77% !important;
+    left: 91% !important;
+    animation: bubble 80s linear infinite !important;
+}
+
+.footer-bottom{
+    border-top: 3px solid rgba(255,255,255,0.13);
+    background-color: rgba(255,255,255,0.13);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.m-0{
+    font-size: 18px !important;
+    color: var(--peach-shadow1) !important;
+    padding: 7px;
+}
+
