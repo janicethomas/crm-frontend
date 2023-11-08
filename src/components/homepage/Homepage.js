@@ -49,16 +49,24 @@ const Homepage = () => {
           <h2 class="subtitle">Your Partner in Customer Success</h2>
         </div>
         <div class="home">
-        <div class="background">
-        <div className="shape"></div>
-        <div className="shape"></div>
+        <div class="bubble-animation">
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
+        <div className="bubble-animation-item"></div>
         </div>
         <div className="form d-flex flex-wrap flex-row justify-content-around align-items-center">
           <div>
           <button className="client-button">
             <Link to={"/client-login/"} className="link text-light">
               <img
-                src="https://o.remove.bg/downloads/efc9565c-0fb4-482d-851e-61d3c7b5724c/png-clipart-anonymous-person-login-google-account-computer-icons-user-activity-miscellaneous-computer-removebg-preview.png"
+                src=""
                 alt="Client"
                 width="190px"
                 height="200px"
@@ -99,6 +107,11 @@ const Homepage = () => {
       <section>
 
       </section>
+      <div class="footer-bottom">
+            <div class="container">
+                <p class="m-0 text-center">&copy; 2023 <i>CRM360</i>. All Rights Reserved.</p>
+            </div>
+        </div>
     </div>
   );
 };
