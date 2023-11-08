@@ -1,4 +1,5 @@
 import React from 'react';
+import "./login.css";
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
@@ -8,11 +9,11 @@ export const AdminLogin = ({ handleOnChange, handleOnSubmit, formSwitcher, email
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-info text-center'>Admin Login</h1>
+                    <h1 className='text-info text-center ltitle'>Admin Login</h1>
                     <hr />
                     <Form autoComplete='off' onSubmit={handleOnSubmit}>
                         <Form.Group>
-                            <Form.Label>Email Address</Form.Label>
+                            <Form.Label class="password">Email Address</Form.Label>
                             <Form.Control
                                 type="email"
                                 name="email"
@@ -24,7 +25,7 @@ export const AdminLogin = ({ handleOnChange, handleOnSubmit, formSwitcher, email
                         </Form.Group>
 
                         <Form.Group>
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label class="password">Password</Form.Label>
                             <Form.Control
                                 type="Password"
                                 name="Password"
@@ -34,7 +35,7 @@ export const AdminLogin = ({ handleOnChange, handleOnSubmit, formSwitcher, email
                                 required
                             />
                         </Form.Group>
-
+                        <br></br>
                         <Button type='Submit'>Login</Button>
                     </Form>
                     <hr />
@@ -42,7 +43,7 @@ export const AdminLogin = ({ handleOnChange, handleOnSubmit, formSwitcher, email
             </Row>
             <Row>
                 <Col>
-                <Link to={"/forget-password/"}>
+                <Link to={"/forget-password/"} class='forgot'>
                 Forgot Password
                 </Link>
                 </Col>
