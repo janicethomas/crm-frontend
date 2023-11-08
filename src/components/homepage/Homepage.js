@@ -48,7 +48,12 @@ const Homepage = () => {
           <h1 class="display-2 title">CRM<i>360</i></h1>
           <h2 class="subtitle">Your Partner in Customer Success</h2>
         </div>
-        <div class="">
+        <div class="home">
+        <div class="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        </div>
+        <div className="form d-flex flex-wrap flex-row justify-content-around align-items-center">
           <div>
           <button className="client-button">
             <Link to={"/client-login/"} className="link text-light">
@@ -87,6 +92,7 @@ const Homepage = () => {
               <br></br>Admin Login
             </Link>
           </button>
+          </div>
           </div>
         </div>
       </section>
