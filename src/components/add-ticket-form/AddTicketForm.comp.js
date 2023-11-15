@@ -53,7 +53,7 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange, frmDt, frmDataEr
                     />
                 </Form.Group>
 
-                <Button type="submit" variant='info' class="btn btn-large btn-success w-100 d-block">Login</Button>
+                <Button type="submit" variant='info' class="btn btn-large btn-success w-100 d-block">Submit</Button>
             </Form>
 
         </div>

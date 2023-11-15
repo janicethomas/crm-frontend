@@ -1,30 +1,36 @@
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Homepage from "./components/homepage/Homepage";
-import { DefaultLayout } from './layout/DefaultLayout';
 import { Dashboard } from './pages/dashboard/Dashboard.page';
 
-import { LoginForm } from './components/login/Login.comp';
+// import { LoginForm } from './components/login/Login.comp';
 import { ResetPassword } from './components/password-reset/PasswordReset.comp';
 import { Entry } from './pages/entry/Entry.page';
-import { EntryAgent } from './pages/entry/EntryA.page';
-import { EntryAdmin } from './pages/entry/EntryAdmin.page';
+import { EntryAgent } from './pages/entry/EntryAgent.page';
+import { EntryAdmin } from './pages/entry/EntryA.page';
 import { AddTicket } from './pages/new-ticket/AddTicket.page';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { TicketLists } from './pages/ticket-list/TicketLists.page';
+import { PrivateRoute } from './components/private-route/PrivateRoute.comp';
+import { Ticket } from './pages/ticket/Ticket.page';
 
 
 function App() {
   return (
     <div className="App">
-    <HashRouter>
-    <Routes>
-    <Route path="/" element={<Homepage />} />
-    <Route path="/client-login" element={<Entry />} />
-    <Route path="/agent-login" element={<EntryAgent />} />
-    <Route path="/admin-login" element={<EntryAdmin />} />
-    <Route path="/forget-password" element={<ResetPassword />} />
-    </Routes>
-  </HashRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/client-login" element={<Entry />} />
+          <Route path="/agent-login" element={<EntryAgent />} />
+          <Route path="/admin-login" element={<EntryAdmin />} />
+          <Route path="/forget-password" element={<ResetPassword/>}/>
+            <Route path="/dashboard" element={<PrivateRoute Component={Dashboard} />} />
+            <Route path="/add-ticket" element={<PrivateRoute Component={AddTicket} />} />
+            <Route path="/tickets" element={<PrivateRoute Component={TicketLists} />} />
+            <Route path="/ticket/:tId" element={<PrivateRoute Component={Ticket} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
 
   //   <div className="App">
