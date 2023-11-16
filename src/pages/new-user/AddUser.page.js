@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button } from "react-bootstrap"
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp"
-import { AddTicketForm } from "../../components/add-ticket-form/AddTicketForm.comp"
+import { AddUserForm } from "../../components/add-user-form/AddUserForm.comp"
 import { shortText } from '../../utils/validation'
 import { Link } from 'react-router-dom'
 
 
 const initialFrmDt = {
-    subject: "",
-    issueDate: "",
-    detail: "",
+    userName: "",
+    userPasswd: "",
+    userPhone: "",
+    userEmail: "",
+    userRole: ""
 
 };
 
 const initialFrmError = {
-    subject: false,
-    issueDate: false,
-    detail: false,
+    userName: false,
+    userPasswd: false,
+    userPhone: false,
+    userEmail: false,
+    userRole: false
 };
 
-export const AddTicket = () => {
+export const AddUser = () => {
     const [frmData, setFrmData] = useState(initialFrmDt);
     const [frmDataError, setFrmDataError] = useState(initialFrmError);
     useEffect(() => { }, [frmData, frmDataError]);
@@ -49,13 +53,13 @@ export const AddTicket = () => {
         <Container>
             <Row>
                 <Col>
-                    <PageBreadcrumb page="New Ticket" />
+                    <PageBreadcrumb page="New User" />
                 </Col>
             </Row>
 
             <Row>
                 <Col>
-                    <AddTicketForm handleOnChange={handleOnChange}
+                    <AddUserForm handleOnChange={handleOnChange}
                         handleOnSubmit={handleOnSubmit} frmDt={frmData}
                         frmDataError={frmDataError}
                     />
@@ -63,7 +67,7 @@ export const AddTicket = () => {
             </Row>
             <Row>
                 <Col xs lg="2">
-                <Link to="/tickets">
+                <Link to="/users">
                         <Button variant='info'>Back</Button>
                     </Link>
                 </Col>

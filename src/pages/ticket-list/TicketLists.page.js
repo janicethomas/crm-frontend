@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 
 
         useEffect(() => { }, [str, dispTicket]);
+        useEffect(() => { }, [str, dispTicket]);
         
 
         const handleOnChange = e => {

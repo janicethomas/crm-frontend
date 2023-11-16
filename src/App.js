@@ -9,11 +9,13 @@ import { Entry } from './pages/entry/Entry.page';
 import { EntryAgent } from './pages/entry/EntryAgent.page';
 import { EntryAdmin } from './pages/entry/EntryA.page';
 import { AddTicket } from './pages/new-ticket/AddTicket.page';
+import { AddUser } from './pages/new-user/AddUser.page';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { TicketLists } from './pages/ticket-list/TicketLists.page';
 import { PrivateRoute } from './components/private-route/PrivateRoute.comp';
 import { Ticket } from './pages/ticket/Ticket.page';
-
+import { UserLists } from './pages/user-list/UserList';
+import { User } from './pages/user/User.page';
 
 function App() {
   return (
@@ -26,9 +28,15 @@ function App() {
           <Route path="/admin-login" element={<EntryAdmin />} />
           <Route path="/forget-password" element={<ResetPassword/>}/>
             <Route path="/dashboard" element={<PrivateRoute Component={Dashboard} />} />
+            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
             <Route path="/add-ticket" element={<PrivateRoute Component={AddTicket} />} />
             <Route path="/tickets" element={<PrivateRoute Component={TicketLists} />} />
+            {/* <Route path="/tickets" element={<TicketLists />} /> */}
             <Route path="/ticket/:tId" element={<PrivateRoute Component={Ticket} />} />
+            {/* <Route path="/ticket/:tId" element={<Ticket />} /> */}
+            <Route path="/users" element={<UserLists />} />
+            <Route path="/user/:uId" element={<User />} />
+            <Route path="/add-user" element={<PrivateRoute Component={AddUser} />} />
         </Routes>
       </BrowserRouter>
     </div>

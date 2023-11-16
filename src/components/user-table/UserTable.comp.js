@@ -1,31 +1,30 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import './ticketTable.css'
+import './userTable.css'
 
-export const TicketTable = ({ tickets }) => {
+export const UserTable = ({ users }) => {
     return (
         <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Subjects</th>
-                    <th>Status</th>
-                    <th>Opened Date</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
                 </tr>
             </thead>
 
             <tbody>
-                {tickets.length ? tickets.map((row) => (
+                {users.length ? users.map((row) => (
                     <tr key={row.id}>
                         <td>{row.id}</td>
                         <td>
-                            <Link to={`/ticket/${row.id}`} className='rm-text-dec'>
-                                {row.subject}
+                            <Link to={`/user/${row.id}`} className='rm-text-dec'>{row.userName}
                             </Link>
-                        </td>
-                        <td>{row.status}</td>
-                        <td>{row.addedAt}</td>
+                            </td>
+                        <td>{row.userEmail}</td>
+                        <td>{row.userRole}</td>
                     </tr>
                 )) :
                     <tr>

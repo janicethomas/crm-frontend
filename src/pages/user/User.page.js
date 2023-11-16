@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp';
-import tickets from '../../assets/data/dummy-tickets.json';
+import users from '../../assets/data/dummy-users.json';
 import { MessageHistory } from '../../components/message-history/MessageHistory.comp';
-import { UpdateTicket } from '../../components/update-ticket/UpdateTicket.comp';
+import { UpdateUser } from '../../components/update-user/UpdateUser.comp';
 import { useParams } from 'react-router-dom';
 
-// const ticket = tickets[0];
+// const user = users[0];
 
-export const Ticket = () => {
-    const {tId} = useParams()
+export const User = () => {
+    const {uId} = useParams()
 
     const [message, setMessage] = useState('');
-    const [ticket, setTicket] = useState("");
+    const [user, setUser] = useState("");
 
     useEffect(() => {
-        for (let i = 0; i < tickets.length; i++) {
-            if (tickets[i].id === tId) {
-                setTicket(tickets[i])
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].id === uId) {
+                setUser(users[i])
                 continue;
             }
         }
-     }, [message, tId]);
+     }, [message, uId]);
 
     const handleOnChange = e => {
         setMessage(e.target.value);
@@ -35,28 +35,29 @@ export const Ticket = () => {
         <Container>
             <Row>
                 <Col>
-                    <PageBreadcrumb page="Ticket" />
+                    <PageBreadcrumb page="User" />
                 </Col>
             </Row>
             <Row>
                 <Col className='font-weight-bolder text-secondary'>v
-                    <div className='subject'>Subject: {ticket.subject}</div>
-                    <div className='date'>Ticket Opened: {ticket.addedAt}</div>
-                    <div className='status'>Status: {ticket.status}</div>
+                    <div className='user-name'>Name: {user.userName}</div>
+                    <div className='user-email'>Email: {user.userEmail}</div>
+                    <div className='user-passwd'>Password: {user.userPasswd}</div>
+                    <div className='user-role'>Role: {user.userRole}</div>
                 </Col>
                 <Col className='text-right'>
-                    <Button variant='outline-info'>Close Ticket</Button>
+                    <Button variant='outline-info'>Close User</Button>
                 </Col>
             </Row>
             <Row className='mt-4'>
                 <Col>
-                    {ticket.history && <MessageHistory msg={ticket.history} />}
+                    {user.history && <MessageHistory msg={user.history} />}
                 </Col>
             </Row>
             <hr />
             <Row>
                 <Col>
-                    <UpdateTicket msg={message}
+                    <UpdateUser msg={message}
                         handleOnChange={handleOnChange} 
                         handleOnSubmit={handleOnSubmit} 
                         />
