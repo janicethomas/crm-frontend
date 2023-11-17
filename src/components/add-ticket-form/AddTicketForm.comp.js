@@ -8,8 +8,8 @@ import "./add-ticket-form.style.css";
 export const AddTicketForm = ({ handleOnSubmit, handleOnChange, frmDt, frmDataError }) => {
     console.log(frmDt)
     return (
-        <div className="mt-3 jumbotron">
-            <h1 className="text-info text-center">Add New Ticket</h1>
+        <div className="mt-3 jumbotron boxing">
+            <h1 className="text-info text-center tti">Add New Ticket</h1>
             <hr />
             <Form autoComplete='off' onSubmit={handleOnSubmit}>
                 <Form.Group as={Row}>
@@ -29,8 +29,8 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange, frmDt, frmDataEr
                 </Form.Group>
 
                 <Form.Group as={Row}>
-                    <Form.Label column sm={3}>Issue Found</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label column sm={5}>Issue Found</Form.Label>
+                    <Col sm={7}>
                         <Form.Control
                             type="date"
                             name="issueDate"
@@ -52,7 +52,7 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange, frmDt, frmDataEr
                         required
                     />
                 </Form.Group>
-
+                <br></br>
                 <Button type="submit" variant='info' class="btn btn-large btn-success w-100 d-block">Submit</Button>
             </Form>
 
