@@ -1,0 +1,14 @@
+.bread{
+    color: var(--Green) !important;
+    font-size: 19px;
+}
+
+a{
+    text-decoration: none !important;
+    
+}
+
+.bread1{
+    color: white;
+    font-size: 19px;
+}
