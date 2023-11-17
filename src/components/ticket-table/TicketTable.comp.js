@@ -6,7 +6,7 @@ import './ticketTable.css'
 export const TicketTable = ({ tickets }) => {
     return (
         <Table striped bordered hover>
-            <thead>
+            <thead className='thea'>
                 <tr>
                     <th>#</th>
                     <th>Subjects</th>
