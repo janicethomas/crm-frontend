@@ -1,6 +1,8 @@
 import React from "react";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
+import logo1 from '../../assets/img/Logo1.png';
+import logo from '../../assets/img/Logo.png';
 
 const Homepage = () => {
   return (
@@ -8,6 +10,12 @@ const Homepage = () => {
     <div class="container-fluid bg-image1">
       <section class="container-fluid d-flex flex-wrap flex-row justify-content-around align-items-center">
         <div>
+        <img
+                src={logo}
+                alt="Client"
+                width="250px"
+                height="250px"
+              />
           <h1 class="display-2 title">CRM<i>360</i></h1>
           <h2 class="subtitle">Your Partner in Customer Success</h2>
         </div>
@@ -28,39 +36,39 @@ const Homepage = () => {
           <div>
           <button className="client-button">
             <Link to={"/client-login/"} className="link text-light">
-              <img
-                src=""
+            <img
+                src={logo1}
                 alt="Client"
-                width="190px"
-                height="200px"
+                width="50px"
+                height="50px"
               />
               <br></br> Client Login
             </Link>
           </button>
           </div>
-          <div>
+          {/* <div>
           <button className="manager-button">
             <Link to={"/agent-login/"} className="link text-light">
               <img
-                src="https://o.remove.bg/downloads/c93901f4-5f56-4ab9-a205-83c389ddac08/images-removebg-preview.png"
+                src={logo1}
                 alt="Agent"
-                width="190px"
-                height="200px"
-              />
-              <br></br> Agent Login
+                width="50px"
+                height="50px"
+  /> 
+            <br></br> Agent Login
             </Link>
           </button>
-          </div>
-          <div>
+          </div> */}
+  <div> 
           <button className="admin-button">
             <Link to={"/admin-login/"} className="link text-light">
               <img
-                src="https://o.remove.bg/downloads/8cdeda1a-d336-45fb-99d2-a6b47f78cb48/61f75ea9a680def2ed1c6929fe75aeee-removebg-preview.png"
+                src={logo1}
                 alt="Admin"
-                width="190px"
-                height="200px"
-              />
-              <br></br>Admin Login
+                width="50px"
+                height="50px"
+              /> 
+              <br></br> Admin Login
             </Link>
           </button>
           </div>
