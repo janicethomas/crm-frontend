@@ -1,0 +1,8 @@
+.bg-form {
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 20px;
+    margin: 2rem;
+    padding: 1rem;
+    /* max-width: 40vw; */
+}

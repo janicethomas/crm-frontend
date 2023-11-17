@@ -9,7 +9,7 @@ export const PageBreadcrumb = ({ page }) => {
         <Breadcrumb>
             {/* <LinkContainer to="/"> */}
             <Breadcrumb.Item>
-            <Link to="/">
+            <Link to="/dashboard">
                         <span className="bread">Home/</span>
                     </Link>
             </Breadcrumb.Item>

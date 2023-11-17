@@ -70,13 +70,6 @@ export const Entry = () => {
           )}
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="m-0 text-center">
-            &copy; 2023 <i>CRM360</i>. All Rights Reserved.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

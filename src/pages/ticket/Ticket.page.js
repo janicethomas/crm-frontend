@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp';
 import tickets from '../../assets/data/dummy-tickets.json';
 import { MessageHistory } from '../../components/message-history/MessageHistory.comp';
-import { UpdateTicket } from '../../components/update-ticket/UpdateTicket.comp';
+import { UpdateTicketForm } from '../../components/update-ticket-form/UpdateTicketForm.comp';
 import { useParams } from 'react-router-dom';
 
 // const ticket = tickets[0];
@@ -56,7 +56,7 @@ export const Ticket = () => {
             <hr />
             <Row>
                 <Col>
-                    <UpdateTicket msg={message}
+                    <UpdateTicketForm msg={message}
                         handleOnChange={handleOnChange} 
                         handleOnSubmit={handleOnSubmit} 
                         />

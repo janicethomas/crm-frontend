@@ -52,7 +52,7 @@ import { Link } from 'react-router-dom';
                 <hr />
                 <Row>
                     <Col>
-                        <TicketTable tickets={dispTicket} />
+                        <TicketTable/>
                     </Col>
                 </Row>
             </Container>

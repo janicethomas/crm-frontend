@@ -21,15 +21,15 @@ export const Dashboard = () => {
                 </Col>
             </Row>
 
-            <Row>
+            {/* <Row>
                 <Col className='text-center mb-2'>
                     <div> Total tickets: 50</div>
                     <div> Pending tickets: 5</div>
                 </Col>
-            </Row>
+            </Row> */}
 
             <Row>
-                <Col className='mt-2'>
+                <Col className='mt-2 text-light'>
                     Recently added tickets
                 </Col>
             </Row>

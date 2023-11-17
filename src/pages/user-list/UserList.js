@@ -52,7 +52,7 @@ export const UserLists = () => {
             <hr />
             <Row>
                 <Col>
-                    <UserTable users={users} />
+                    <UserTable />
                 </Col>
             </Row>
         </Container>

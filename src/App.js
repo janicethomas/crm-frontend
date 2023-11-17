@@ -16,6 +16,8 @@ import { PrivateRoute } from './components/private-route/PrivateRoute.comp';
 import { Ticket } from './pages/ticket/Ticket.page';
 import { UserLists } from './pages/user-list/UserList';
 import { User } from './pages/user/User.page';
+import { UpdateTicket } from './pages/update-ticket/UpdateTicket.page';
+import { UpdateUser } from './pages/update-user/UpdateUser.page';
 
 function App() {
   return (
@@ -34,9 +36,14 @@ function App() {
             {/* <Route path="/tickets" element={<TicketLists />} /> */}
             <Route path="/ticket/:tId" element={<PrivateRoute Component={Ticket} />} />
             {/* <Route path="/ticket/:tId" element={<Ticket />} /> */}
-            <Route path="/users" element={<UserLists />} />
-            <Route path="/user/:uId" element={<User />} />
+            {/* <Route path="/users" element={<UserLists />} />
+            <Route path="/user/:uId" element={<User />} /> */}
             <Route path="/add-user" element={<PrivateRoute Component={AddUser} />} />
+            <Route path="/users" element={<PrivateRoute Component={UserLists} />} />
+            <Route path="/user/:uId" element={<PrivateRoute Component={User} />} />
+            <Route path="/update-ticket/:id" element={<PrivateRoute Component={UpdateTicket} />} />
+            <Route path="/update-user/:id" element={<PrivateRoute Component={UpdateUser} />} />
+            {/* <Route path="/update-ticket/:id" element={<UpdateTicket />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

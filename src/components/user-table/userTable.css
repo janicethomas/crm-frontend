@@ -4,7 +4,8 @@
 }
 
 body{
-    background-image: url("https://i.pinimg.com/736x/7c/75/cb/7c75cbaae5a31e40ac3dfdad8e3a4c68.jpg");
+    background-image: url("https://img.freepik.com/free-vector/technology-background_23-2148119855.jpg?size=626&ext=jpg&ga=GA1.1.1842696021.1700262661&semt=ais");
+    /* background-image: url("https://i.pinimg.com/736x/7c/75/cb/7c75cbaae5a31e40ac3dfdad8e3a4c68.jpg"); */
     background-repeat: no-repeat;
     min-width: 100%;
     min-height: 100%;
@@ -27,9 +28,9 @@ body{
     padding: 0 !important;
 }
 
-.footer-bottom{
+/* .footer-bottom{
     border-top: 3px solid rgba(255, 255, 255, 0.13);
     background-color: rgba(255, 255, 255, 0.762);
     font-weight: 700;
     cursor: pointer;
-}
+} */

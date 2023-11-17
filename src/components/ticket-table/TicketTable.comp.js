@@ -1,36 +1,57 @@
 import React from 'react'
+import {useEffect, useState} from 'react'
+import Axios  from 'axios'
 import { Table } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import TicketTableRow from "./TicketTableRow"
 import './ticketTable.css'
 
-export const TicketTable = ({ tickets }) => {
+export const TicketTable = () => {
+    const [arr,setArr] = useState([]);
+
+    useEffect(()=>{
+        Axios.get("http://localhost:4000/ticketRoute")
+        .then((res)=>{
+            if (res.status === 200)
+                setArr(res.data);
+            else
+                Promise.reject();
+        })
+        .catch((err)=>alert(err))
+    },[])
+
+    const ListItems = () => {
+        return arr.map((val,ind)=>{
+            return <TicketTableRow key={ind} obj = {val}/>
+        })
+    }
+
     return (
         <Table striped bordered hover>
-            <thead className='thea'>
+            <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Subjects</th>
+                    <th>Subject</th>
                     <th>Status</th>
-                    <th>Opened Date</th>
+                    <th>Close Ticket</th>
                 </tr>
             </thead>
 
             <tbody>
-                {tickets.length ? tickets.map((row) => (
+                {/* {users.length ? users.map((row) => (
                     <tr key={row.id}>
                         <td>{row.id}</td>
                         <td>
-                            <Link to={`/ticket/${row.id}`} className='rm-text-dec'>
-                                {row.subject}
+                            <Link to={`/user/${row.id}`} className='rm-text-dec'>{row.userName}
                             </Link>
-                        </td>
-                        <td>{row.status}</td>
-                        <td>{row.addedAt}</td>
+                            </td>
+                        <td>{row.userEmail}</td>
+                        <td>{row.userRole}</td>
                     </tr>
                 )) :
                     <tr>
                         <td colSpan="4">No ticket to show</td>
-                    </tr>}
+                    </tr>} */}
+                    {ListItems()}
             </tbody>
         </Table>
     );
