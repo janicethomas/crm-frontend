@@ -23,6 +23,19 @@ export const UpdateTicketForm = () =>
         .catch((err)=>alert(err))
     },[id]);
 
+    // useEffect(()=>{
+    //     Axios.get("https://mern-crm-backend.onrender.com/ticketRoute/update-ticket/"+id)
+    //     .then((res)=>{
+    //         if(res.status === 200){
+    //             const {subject,status,message,adminReply} = res.data;
+    //             setData({subject,status,message,adminReply});
+    //         }
+    //         else
+    //             Promise.reject();
+    //     })
+    //     .catch((err)=>alert(err))
+    // },[id]);
+
     const getState = (childData) =>{
         setNewData(childData);
     }
@@ -38,6 +51,18 @@ export const UpdateTicketForm = () =>
         })
         .catch((err)=>alert(err))
     }
+
+    // const handleSubmit = () => {
+    //     const data = {subject:newData[0],status:newData[1],message:newData[2],adminReply:newData[3]}
+    //     Axios.put("https://mern-crm-backend.onrender.com/ticketRoute/update-ticket/"+id, data)
+    //     .then((res)=>{
+    //         if(res.status === 200)
+    //             alert("Record updated successfully");
+    //         else
+    //             Promise.reject();
+    //     })
+    //     .catch((err)=>alert(err))
+    // }
 
     return (
         <form onSubmit={handleSubmit}>

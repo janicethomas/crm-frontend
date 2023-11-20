@@ -20,6 +20,21 @@ function TicketTableRow(props)
         .catch((err)=>alert(err));
     }
 
+    // const handleClick = () => {
+    //     Axios.delete("https://mern-crm-backend.onrender.com/ticketRoute/delete-ticket/"+ _id)
+    //     .then((res)=>{
+    //         if(res.status === 200)
+    //         {
+    //             alert("record deleted")
+    //             window.location.reload()
+    //         }
+    //         else
+    //         Promise.reject();
+
+    //     })
+    //     .catch((err)=>alert(err));
+    // }
+
     return(
         <tr>
             <td>

@@ -22,6 +22,19 @@ function AddTicketForm()
         .catch((err)=>alert(err));
     }
 
+    // const handleSubmit = () => {
+    //     const data = {subject: arr[0], status: arr[1], message: arr[2], adminReply: arr[3]}
+    //     Axios.post("https://mern-crm-backend.onrender.com/ticketRoute/create-ticket",data)
+    //     .then((res)=>{
+    //         if(res.status === 200)
+    //             alert("record added")
+    //         else
+    //         Promise.reject();
+
+    //     })
+    //     .catch((err)=>alert(err));
+    // }
+
     return(
         <form onSubmit={handleSubmit}>
             <TicketForm getState={getState} subjectValue="" statusValue="" messageValue="" adminReplyValue="">

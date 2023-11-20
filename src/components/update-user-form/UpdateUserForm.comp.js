@@ -23,6 +23,20 @@ export const UpdateUserForm = () =>
         .catch((err)=>alert(err))
     },[id]);
 
+    // useEffect(()=>{
+    //     Axios.get("https://mern-crm-backend.onrender.com/userRoute/update-user/"+id)
+    //     .then((res)=>{
+    //         if(res.status === 200){
+    //             const {userName,userEmail,userPasswd,userRole} = res.data;
+    //             setData({userName,userEmail,userPasswd,userRole});
+    //         }
+    //         else
+    //             Promise.reject();
+    //     })
+    //     .catch((err)=>alert(err))
+    // },[id]);
+
+
     const getState = (childData) =>{
         setNewData(childData);
     }
@@ -38,6 +52,18 @@ export const UpdateUserForm = () =>
         })
         .catch((err)=>alert(err))
     }
+
+    // const handleSubmit = () => {
+    //     const data = {userName:newData[0],userEmail:newData[1],userPasswd:newData[2],userRole:newData[3]}
+    //     Axios.put("https://mern-crm-backend.onrender.com/userRoute/update-user/"+id, data)
+    //     .then((res)=>{
+    //         if(res.status === 200)
+    //             alert("Record updated successfully");
+    //         else
+    //             Promise.reject();
+    //     })
+    //     .catch((err)=>alert(err))
+    // }
 
     return (
         <form onSubmit={handleSubmit}>

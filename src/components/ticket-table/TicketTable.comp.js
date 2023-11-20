@@ -9,8 +9,19 @@ import './ticketTable.css'
 export const TicketTable = () => {
     const [arr,setArr] = useState([]);
 
+    // useEffect(()=>{
+    //     Axios.get("http://localhost:4000/ticketRoute")
+    //     .then((res)=>{
+    //         if (res.status === 200)
+    //             setArr(res.data);
+    //         else
+    //             Promise.reject();
+    //     })
+    //     .catch((err)=>alert(err))
+    // },[])
+
     useEffect(()=>{
-        Axios.get("http://localhost:4000/ticketRoute")
+        Axios.get("https://mern-crm-backend.onrender.com/ticketRoute")
         .then((res)=>{
             if (res.status === 200)
                 setArr(res.data);

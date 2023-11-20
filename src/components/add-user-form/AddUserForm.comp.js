@@ -22,6 +22,19 @@ function AddUserForm()
         .catch((err)=>alert(err));
     }
 
+    // const handleSubmit = () => {
+    //     const data = {userName: arr[0], userEmail: arr[1], userPasswd: arr[2], userRole: arr[3]}
+    //     Axios.post("https://mern-crm-backend.onrender.com/userRoute/create-user",data)
+    //     .then((res)=>{
+    //         if(res.status === 200)
+    //             alert("record added")
+    //         else
+    //         Promise.reject();
+
+    //     })
+    //     .catch((err)=>alert(err));
+    // }
+
     return(
         <form onSubmit={handleSubmit}>
             <UserForm getState={getState} nameValue="" emailValue="" passwdValue="" roleValue="">
