@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import TicketForm from "../ticket-form/TicketForm.comp";
+import TicketFormClient from "../ticket-form/TicketFormClient.comp";
 import Axios from "axios";
 import { useEffect, useState } from "react";
 
-export const UpdateTicketForm = () =>
+export const UpdateTicketFormClient = () =>
 {
     const {id} =  useParams();
 
@@ -41,7 +41,7 @@ export const UpdateTicketForm = () =>
     }
 
     const handleSubmit = () => {
-        const data = {subject:newData[3],status:newData[1],message:newData[2],adminReply:newData[0]}
+        const data = {subject:newData[0],status:newData[1],message:newData[2],adminReply:newData[3]}
         Axios.put("http://localhost:4000/ticketRoute/update-ticket/"+id, data)
         .then((res)=>{
             if(res.status === 200)
@@ -66,9 +66,9 @@ export const UpdateTicketForm = () =>
 
     return (
         <form onSubmit={handleSubmit}>
-            <TicketForm getState={getState} subjectValue={data.subject} statusValue={data.status} messageValue={data.message} adminReplyValue={data.adminReply}>
+            <TicketFormClient getState={getState} subjectValue={data.subject} statusValue={data.status} messageValue={data.message} adminReplyValue={data.adminReply}>
                     Update Ticket
-                    </TicketForm>
+                    </TicketFormClient>
         </form>
     )
 }

@@ -36,7 +36,7 @@ export const LoginForm = ({ handleOnChange, handleOnSubmit, formSwitcher, email,
                             />
                         </Form.Group>
                             <br></br>
-                        <Button type='Submit' class="buttons">Login</Button>
+                            <Button type='Submit'><Link to="/dashboard-client" class="text-light">Login</Link></Button>
                     </Form>
                     <hr />
                 </Col>
